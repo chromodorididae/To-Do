@@ -1,4 +1,4 @@
-import React, { useState } from'react';
+import React, { useState } from 'react';
 //input useState is imported here
 
 import './App.css';
@@ -38,6 +38,7 @@ function App() {
     const newArray = items.filter(item => item.id!== id);
     // "everything excluding selected item"
     setItems(newArray);
+
   }
 
   return (
@@ -55,6 +56,7 @@ function App() {
     {/* useState is called as value and entered item is stored */}
     <button onClick={() => addItem()}>Add</button>
 
+    <div className="container">
     {/* unordered list */}
     <ul style={{listStyle: 'none'}}>
       {items.map( item => {
@@ -65,6 +67,7 @@ function App() {
         )
       })}
     </ul>
+    </div>
 
   </div>
   );
